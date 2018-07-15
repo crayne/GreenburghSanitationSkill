@@ -1,0 +1,102 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "greenburgh sanitation",
+            "intents": [
+                {
+                    "name": "GreenburghSanitationIntent",
+                    "slots": [
+                        {
+                            "name": "Sanitation_Title",
+                            "type": "SANITATION_TITLE"
+                        },
+                        {
+                            "name": "Which_Day",
+                            "type": "WHICH_DAY"
+                        },
+                        {
+                            "name": "Pickup_Type",
+                            "type": "PICKUP_TYPE"
+                        }
+                    ],
+                    "samples": [
+                        "about {Pickup_Type} pickup",
+                        "What are you picking up {Which_Day}",
+                        "When is the next {Pickup_Type} pickup",
+                        "When are you picking up {Pickup_Type} next"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "SANITATION_TITLE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "title1"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "WHICH_DAY",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "tomorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "today"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PICKUP_TYPE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "garbage",
+                                "synonyms": [
+                                    "trash"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "paper",
+                                "synonyms": [
+                                    "cardboard"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "commingled",
+                                "synonyms": [
+                                    "mixed",
+                                    "plastic",
+                                    "metal"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
